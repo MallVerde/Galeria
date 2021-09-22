@@ -1,30 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="ToDoList">
+<html lang="en" ng-app="gallery">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width1, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
-    <script src="angular-local-storage.min.js"></script>
-    <script src="controller.js"></script>
+    <title>Galeria</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.8.2/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="scripts/directives.js"></script>
 </head>
 
-<body ng-controller="ToDoController">
-    <ul>
-        <li ng-repeat="actividad in todo">
-            {{actividad.descripcion}}
-            {{actividad.fecha | date: 'short'}}
-            <a href="#" ng-click="removeActv(actividad)" style="color: red;">X</a>
-        </li>
-    </ul>
-    <form ng-submit="addActv()">
-        <input type="text" ng-model="newActv.descripcion">
-        <input type="datetime-local" ng-model="newActv.fecha">
-        <input type="submit" value="Guardar actividad">
-    </form>
-    <button ng-click="clean()">Limpiar</button>
+<body ng-controller="controlador">
+    <div ng-include="'views/nav.html'"></div>
+    <div ng-view></div>
+    <div ng-include="'views/footer.html'"></div>
 </body>
 
 </html>
