@@ -1,7 +1,79 @@
+:root {
+  --fuenteEnlaces: "Ubuntu", sans-serif;
+
+  --primario: #f7eae6;
+  --negro: #000000;
+  --gris: #363636;
+  --blanco: #ffffff;
+}
+
+html {
+  font-size: 62.5%; /*1 rem = 1px*/
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--fuenteParrafos);
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+
+/* Estilos para todo el contenido del header incluyendo el navbar*/
+.header {
+  background-color: var(--primario);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.9rem 3rem;
+}
+
+.nav__logo {
+  display: flex;
+}
+
+.navegacion {
+  display: flex;
+  gap: 4rem;
+}
+
+.navegacion__enlace {
+  text-decoration: none;
+  color: var(--negro);
+  font-family: var(--fuenteEnlaces);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+.nav__redes {
+  font-size: 1.8rem;
+  color: var(--gris);
+  display: flex;
+  gap: 2rem;
+}
+
+/* Estilos para el contenedor principal*/
+
+.main {
+  width: 100%;
+}
+
+.contenido {
+  width: 90%;
+  margin: auto;
 }

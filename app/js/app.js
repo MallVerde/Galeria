@@ -9,6 +9,10 @@ gallery.config(function($routeProvider){
     .when("/contacto",{
         templateUrl:"views/contact.html",
         controller:"controlador"
+    })
+    .when("/galeria",{
+        templateUrl:"views/gallery.html",
+        controller:"controlador"
     });
 });
 

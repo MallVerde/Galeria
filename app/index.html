@@ -5,17 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width1, initial-scale=1.0">
-    <title>Galeria</title>
+    <title>Gallery</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- ANGULAR -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.8.2/angular-route.min.js"></script>
+
+    <!-- JS -->
     <script src="js/app.js"></script>
     <script src="scripts/directives.js"></script>
+
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+
+    <!-- FONTS  -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body ng-controller="controlador">
     <div ng-include="'views/nav.html'"></div>
-    <div ng-view></div>
+    <div ng-view class="main"></div>
     <div ng-include="'views/footer.html'"></div>
 </body>
 
