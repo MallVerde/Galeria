@@ -8,6 +8,8 @@
   --gris-secundario: #f8f8f8;
   --gris-terciario: #161616;
   --blanco: #ffffff;
+  --azul: rgb(231, 240, 240);
+
   --hoverColor: rgb(214, 120, 135);
 }
 
@@ -61,6 +63,7 @@ p {
   font-size: 2rem;
   font-family: sans-serif;
   color: var(--gris-primario);
+  margin-bottom: 1rem;
 }
 
 img {
@@ -92,6 +95,7 @@ img {
   box-shadow: 0px 3px 8px -1px rgba(0, 0, 0, 0.11);
   cursor: pointer;
   margin-top: 2rem;
+  text-transform: uppercase;
 }
 
 .btn:hover {
@@ -115,29 +119,63 @@ img {
   display: flex;
 }
 
-.navegacion {
+.nav__links {
   display: flex;
-  gap: 4rem;
 }
 
-.navegacion__enlace {
+.nav__link {
   text-decoration: none;
   color: var(--negro);
   font-family: var(--fuenteEnlaces);
   text-transform: uppercase;
   font-size: 1.4rem;
+  padding: 2rem;
 }
 
-.navegacion__enlace:hover {
+.nav__link:hover {
   color: var(--hoverColor);
   transition: color 0.1s linear 0.2s;
 }
 
-.nav__redes {
+.nav__social {
   font-size: 1.8rem;
   color: var(--gris-primario);
   display: flex;
   gap: 2rem;
+}
+
+.dropdown {
+  display: flex;
+}
+
+.dropdown_sub {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+
+.dropdown__link {
+  text-decoration: none;
+  color: var(--negro);
+  font-family: var(--fuenteEnlaces);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.dropdown__link:hover {
+  color: var(--hoverColor);
+  transition: color 0.1s linear 0.1s;
+}
+
+.dropdown:hover > div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem;
+  background-color: var(--blanco);
+  padding: 2rem;
+  min-width: 20rem;
+  transition: all 10s linear 10s;
 }
 
 /* Fin del nav */
@@ -158,9 +196,32 @@ img {
 
 .specialities__content {
   display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 4rem;
+  padding-top: 4rem;
+}
+
+.specialities__article {
+  grid-column: 1/5;
+}
+
+.specialities__img {
+  grid-column: 5/11;
+}
+
+.aboutme {
+  background-color: var(--azul);
+}
+
+.aboutme__content {
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   padding-top: 4rem;
+}
+
+.aboutme__img {
+  grid-row: 1/2;
 }
 
 /* Fin de home */
