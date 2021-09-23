@@ -1,10 +1,14 @@
 :root {
+  --fuenteHeading: "Ubuntu", sans-serif;
   --fuenteEnlaces: "Ubuntu", sans-serif;
 
-  --primario: #f7eae6;
+  --primario: hsl(14, 52%, 94%);
   --negro: #000000;
-  --gris: #363636;
+  --gris-primario: #363636;
+  --gris-secundario: #f8f8f8;
+  --gris-terciario: #161616;
   --blanco: #ffffff;
+  --hoverColor: rgb(214, 120, 135);
 }
 
 html {
@@ -31,7 +35,71 @@ body {
   -webkit-box-sizing: border-box;
 }
 
-/* Estilos para todo el contenido del header incluyendo el navbar*/
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fuenteHeading);
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 2rem;
+  font-family: sans-serif;
+  color: var(--gris-primario);
+}
+
+img {
+  width: 100%;
+}
+
+.content-size {
+  width: 85%;
+  margin: auto;
+}
+
+.centrar-texto {
+  text-align: center;
+}
+
+.contenido-padding {
+  padding: 7rem 0;
+}
+
+.btn {
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  font-family: var(--fuenteEnlaces);
+  font-size: 1.5rem;
+  background-color: var(--blanco);
+  border-style: none;
+  -webkit-box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.51);
+  box-shadow: 0px 3px 8px -1px rgba(0, 0, 0, 0.11);
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.btn:hover {
+  color: var(--hoverColor);
+  transition: color 0.1s linear 0.2s;
+}
+
+/* Estilos para el navbar*/
 .header {
   background-color: var(--primario);
 }
@@ -60,20 +128,118 @@ body {
   font-size: 1.4rem;
 }
 
+.navegacion__enlace:hover {
+  color: var(--hoverColor);
+  transition: color 0.1s linear 0.2s;
+}
+
 .nav__redes {
   font-size: 1.8rem;
-  color: var(--gris);
+  color: var(--gris-primario);
   display: flex;
   gap: 2rem;
 }
 
-/* Estilos para el contenedor principal*/
+/* Fin del nav */
 
 .main {
   width: 100%;
 }
 
-.contenido {
-  width: 90%;
-  margin: auto;
+/* Estilos para la vista Home*/
+
+.welcome {
+  background-color: var(--primario);
 }
+
+.specialities {
+  background-color: var(--gris-secundario);
+}
+
+.specialities__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding-top: 4rem;
+}
+
+/* Fin de home */
+
+/* Estilos para el footer */
+
+.footer {
+  width: 100%;
+  background-color: var(--gris-terciario);
+}
+
+.footer__information {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: white;
+  padding-bottom: 3rem;
+}
+
+.post__perfil {
+  display: flex;
+  gap: 2rem;
+}
+
+.post__information {
+  font-family: sans-serif;
+  font-size: 1.2rem;
+}
+
+.post__information div {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.categorie__list {
+  column-count: 2;
+  font-family: sans-serif;
+  padding-left: 2rem;
+}
+
+.footer__tags {
+  padding-bottom: 3rem;
+}
+
+.footer__touch {
+  font-family: sans-serif;
+  padding-bottom: 3rem;
+}
+
+.elsewhere__icons {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.7rem;
+}
+
+.footer__more {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+}
+
+.footer__help {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__allRights {
+  text-align: center;
+  color: var(--blanco);
+}
+
+.footer__copy {
+  font-family: sans-serif;
+}
+/* Fin del footer */

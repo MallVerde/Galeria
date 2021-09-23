@@ -16,6 +16,4 @@ gallery.config(function($routeProvider){
     });
 });
 
-gallery.controller("controlador", function($scope){
-    
-});
+gallery.controller("controlador", function($scope){});
