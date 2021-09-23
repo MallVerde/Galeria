@@ -8,7 +8,7 @@
   --gris-secundario: #f8f8f8;
   --gris-terciario: #161616;
   --blanco: #ffffff;
-  --azul: rgb(231, 240, 240);
+  --azul: rgba(236, 240, 240, 0.952);
 
   --hoverColor: rgb(214, 120, 135);
 }
@@ -225,6 +225,19 @@ img {
 }
 
 /* Fin de home */
+
+/* Estilos para la vista Contact */
+
+.contact {
+  background-color: var(--gris-secundario);
+}
+
+.contactForm {
+  width: 750px;
+  margin: auto;
+}
+
+/* Fin de contact */
 
 /* Estilos para el footer */
 
