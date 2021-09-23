@@ -7,8 +7,10 @@
   --gris-primario: #363636;
   --gris-secundario: #f8f8f8;
   --gris-terciario: #161616;
+  --gris-cuarto: #e7e7e7;
   --blanco: #ffffff;
   --azul: rgba(236, 240, 240, 0.952);
+  --azul-primario: rgb(117, 169, 230);
 
   --hoverColor: rgb(214, 120, 135);
 }
@@ -101,6 +103,17 @@ img {
 .btn:hover {
   color: var(--hoverColor);
   transition: color 0.1s linear 0.2s;
+}
+
+.btn-submit {
+  padding: 1.5rem 3rem;
+  font-size: 1.4rem;
+  border-radius: 5rem;
+  text-transform: uppercase;
+  border-style: none;
+  background-color: var(--azul-primario);
+  color: var(--blanco);
+  cursor: pointer;
 }
 
 /* Estilos para el navbar*/
@@ -235,6 +248,60 @@ img {
 .contactForm {
   width: 750px;
   margin: auto;
+}
+
+.contactForm__comunication {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-family: sans-serif;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.comunication__icon {
+  font-size: 4rem;
+  color: var(--azul-primario);
+}
+
+.comunication__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.form-control {
+  border-radius: 5rem;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1rem;
+  border-style: none;
+  background-color: var(--gris-cuarto);
+  color: var(--negro);
+  font-family: sans-serif;
+  font-size: 1.6rem;
+}
+
+.form-submit {
+  display: flex;
+  justify-content: center;
+}
+
+.form__message {
+  width: 100%;
+  border-radius: 2rem;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1rem;
+  resize: none;
+  border-style: none;
+  background-color: var(--gris-cuarto);
+  color: var(--negro);
+  font-family: sans-serif;
 }
 
 /* Fin de contact */
