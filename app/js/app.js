@@ -12,7 +12,7 @@ gallery.config(function($routeProvider){
     })
     .when("/galeria",{
         templateUrl:"views/gallery.html",
-        controller:"controlador"
+        controller:"galeria"
     });
 });
 
