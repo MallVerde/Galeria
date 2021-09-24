@@ -12,8 +12,8 @@ gallery.config(function($routeProvider){
     })
     .when("/galeria",{
         templateUrl:"views/gallery.html",
-        controller:"controlador"
+        controller:"galeria"
     });
 });
 
-gallery.controller("controlador", function($scope){});
+gallery.controller("controlador",function($scope){});

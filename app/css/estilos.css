@@ -75,6 +75,7 @@ img {
 .content-size {
   width: 85%;
   margin: auto;
+  max-width: 1400px;
 }
 
 .centrar-texto {
@@ -285,6 +286,7 @@ img {
   color: var(--negro);
   font-family: sans-serif;
   font-size: 1.6rem;
+  outline: none;
 }
 
 .form-submit {
@@ -302,9 +304,48 @@ img {
   background-color: var(--gris-cuarto);
   color: var(--negro);
   font-family: sans-serif;
+  font-size: 1.6rem;
+  outline: none;
 }
 
 /* Fin de contact */
+
+/* Estilos para gallery */
+
+.gallery {
+  background-color: var(--gris-secundario);
+}
+
+.gallery__title {
+  padding-bottom: 5rem;
+}
+
+.album__container {
+  width: 100%;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.album {
+  padding: 1.5rem;
+  background-color: var(--blanco);
+  -webkit-box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.51);
+  box-shadow: 0px 3px 14px -1px rgba(0, 0, 0, 0.11);
+}
+
+.album__title {
+  text-align: center;
+  color: var(--gris-primario);
+  text-transform: uppercase;
+}
+
+.album__title-style {
+  font-family: sans-serif;
+}
+
+/* Fin de gallery */
 
 /* Estilos para el footer */
 
