@@ -1,6 +1,6 @@
 gallery.controller("galeria",['$scope','servicios', function($scope, servicios){
-    servicios.getData()
+    servicios.getAlbums()
     .then(function(response){
-        $scope.datos = response.filter((value)=> value.id <= 10);
+        $scope.albums = response.filter((value)=> value.id <= 9);
     });
 }])

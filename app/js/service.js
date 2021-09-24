@@ -1,6 +1,6 @@
 gallery.factory('servicios', function($http){
     var servicios =  {
-        getData: function(){
+        getAlbums: function(){
             return $http({
                 url:"https://jsonplaceholder.typicode.com/photos",
                 method:"GET",

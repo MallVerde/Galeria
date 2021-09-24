@@ -1,14 +1,22 @@
 <div class="gallery contenido-padding" ng-controller="galeria">
     <div class="content-size">
-        <div class="title">
-            <h2>Hi, This Is Missio</h2>
+        <div class="gallery__title centrar-texto ">
+            <h1>Hi, This Is Missio</h1>
             <p>Wedding, Fashion, Event Photographer</p>
         </div>
-        <div class="album">
-            <div class="album__content">
-                <div class="album__image">
-                </div>
-                <div class="algum__tittle">
+        <div class="album__container">
+            <div class="album" ng-repeat="album in albums">
+                <div>
+                    <div class="album__content">
+                        <div class="album__image">
+                            <img src="{{album.url}}" alt="">
+                        </div>
+                        <div class="album__title">
+                            <span class="album__title-style">
+                                {{album.title.slice(0,20)}}
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
