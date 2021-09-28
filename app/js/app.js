@@ -4,16 +4,13 @@ gallery.config(function($routeProvider){
     $routeProvider
     .when("/",{
         templateUrl:"views/home.html",
-        controller:"controlador"
-    })
-    .when("/contacto",{
-        templateUrl:"views/contact.html",
-        controller:"controlador"
+        controller:"inicio"
     })
     .when("/galeria",{
         templateUrl:"views/gallery.html",
         controller:"galeria"
+    })
+    .when("/contacto",{
+        templateUrl:"views/contact.html",
     });
 });
-
-gallery.controller("controlador",function($scope){});

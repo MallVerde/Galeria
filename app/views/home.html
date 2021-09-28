@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-controller="inicio">
     <div class="welcome contenido-padding">
         <div class="welcome__container content-size">
             <h2 class="centrar-texto">WELCOME! I'M CAITLYN</h2>
@@ -32,7 +32,7 @@
                     <button class="btn">Check my gallery</button>
                 </div>
                 <div class="specialities__img">
-                    <img src="img/img_01.png" alt="">
+                    <img src="images/img_01.png" alt="">
                 </div>
             </div>
         </div>
@@ -56,12 +56,39 @@
                     <button class="btn">More aboutme</button>
                 </div>
                 <div class="aboutme__img">
-                    <img src="img/img_02.jpg" alt="">
+                    <img src="images/img_02.jpg" alt="">
                 </div>
             </div>
         </div>
     </div>
-    <div class="shots"></div>
+    <div class="gallery contenido-padding">
+        <div class="content-size">
+            <div class="gallery__title centrar-texto ">
+                <h2 class="mayus">Some Of My Shots</h2>
+                <p class="text-light">Photography is my passion and I love to turn ideas into beautiful things.</p>
+            </div>
+            <div class="album__container" ng-hide="!albums.length">
+                <div class="album" ng-repeat="album in albums">
+                    <div class="album__content">
+                        <div class="album__image">
+                            <div class="album__image-hover">
+                                <h4 class="mayus">See galery</h4>
+                            </div>
+                            <img src="{{album.url}}" alt="">
+                        </div>
+                        <div class="album__title">
+                            <span class="album__title-style">
+                                {{album.title.slice(0,20)}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div ng-show="!albums.length" class="spinner">
+                <span class="loader"><span class="loader-inner"></span></span>
+            </div>
+        </div>
+    </div>
     <div class="something contenido-padding">
         <div class="something__content album__image">
             <div class="something__image">
@@ -78,7 +105,7 @@
                     <div class="album__image-hover">
                         <h4>READ MORE</h4>
                     </div>
-                    <img src="img/img_04.jpg" alt="">
+                    <img src="images/img_04.jpg" alt="">
                 </div>
                 <div class="journal__content">
                     <div>
@@ -99,7 +126,7 @@
                     <div class="album__image-hover">
                         <h4>READ MORE</h4>
                     </div>
-                    <img src="img/img_04.jpg" alt="">
+                    <img src="images/img_04.jpg" alt="">
                 </div>
                 <div class="journal__content">
                     <div>
@@ -120,7 +147,7 @@
                     <div class="album__image-hover">
                         <h4>READ MORE</h4>
                     </div>
-                    <img src="img/img_04.jpg" alt="">
+                    <img src="images/img_04.jpg" alt="">
                 </div>
                 <div class="journal__content">
                     <div>
