@@ -71,15 +71,16 @@
                 <div class="album" ng-repeat="album in albums">
                     <div class="album__content">
                         <div class="album__image">
-                            <div class="album__image-hover">
+                            <a href="{{album.url}}" class="album__image-hover" data-lightbox="image-1"
+                                data-title="{{album.title.slice(0,20)}}">
                                 <h4 class="mayus">See galery</h4>
-                            </div>
+                            </a>
                             <img src="{{album.url}}" alt="">
                         </div>
-                        <div class="album__title">
-                            <span class="album__title-style">
-                                {{album.title.slice(0,20)}}
-                            </span>
+                        <div class="album__title left-text">
+                            <h4 class="album__title-style capitalize text-normal" style="margin-bottom: .5rem;">
+                                {{album.title.slice(0,20)}}</h4>
+                            <span class="album__title-style capitalize text-normal">{{album.title.slice(0,30)}}</span>
                         </div>
                     </div>
                 </div>
