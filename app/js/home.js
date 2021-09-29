@@ -3,4 +3,6 @@ gallery.controller("inicio",['$scope','servicios', function($scope, servicios){
     .then(function(response){
         $scope.albums = response.filter((value)=> value.id <= 9);
     });
+
+    $('.prueba').slick();
 }])
