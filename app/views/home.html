@@ -1,8 +1,8 @@
 <div ng-controller="inicio">
     <div class="welcome contenido-padding">
-        <div class="welcome__container content-size">
-            <h2 class="centrar-texto">WELCOME! I'M CAITLYN</h2>
-            <P class="centrar-texto text-bold">I'm freelance photographer specializing in people & portrait photography,
+        <div class="content-size">
+            <h2 class="text-center">WELCOME! I'M CAITLYN</h2>
+            <P class="text-center text-bold">I'm freelance photographer specializing in people & portrait photography,
                 based in
                 <br> London. Photography is my passion and I love to turn ideas into beautiful things. <br> Looking for
                 a caring, fun, passionate and creative photographer? It's me!
@@ -34,15 +34,15 @@
                 </div>
             </div>
             <div>
-                <p class="centrar-texto text-bold">
+                <p class="text-center text-bold mrg-bottom">
                     I'd like to give you a unique photography experience, capturing your <br>
                     portraits with excellent composition and lighting skills.
                 </p>
             </div>
-            <div class="specialities__content">
-                <div class="home__article specialities__article">
-                    <h2 class="centrar-texto">MY SPECIALITIES</h2>
-                    <p class="text-medium">
+            <div class="row">
+                <div class="d-flex flex-column justify-content-center align-items-center col-5 mrg-top">
+                    <h2 class="text-center mrg-medium">MY SPECIALITIES</h2>
+                    <p class="text-medium mrg-medium">
                         I'm passionate about photography & it becomes quite obvious in the way I create portraits
                     </p>
                     <p class="text-normal">
@@ -53,7 +53,7 @@
                     </p>
                     <button class="boton">Check my gallery</button>
                 </div>
-                <div class="specialities__img">
+                <div class="col-7">
                     <img src="images/img_01.png" alt="">
                 </div>
             </div>
@@ -61,10 +61,10 @@
     </div>
     <div class="aboutme contenido-padding">
         <div class="content-size">
-            <div class="aboutme__content">
-                <div class="home__article">
-                    <h2>ABOUT ME</h2>
-                    <p class="text-medium">
+            <div class="row d-flex flex-row-reverse">
+                <div class=" d-flex flex-column justify-content-center align-items-center col-5">
+                    <h2 class="mrg-medium">ABOUT ME</h2>
+                    <p class="text-medium mrg-medium">
                         I'm passionate about photography & it becomes quite obvious in the way I create portraits
                     </p>
                     <p class="text-normal">
@@ -77,7 +77,7 @@
                     </p>
                     <button class="boton">More aboutme</button>
                 </div>
-                <div class="aboutme__img">
+                <div class="aboutme__img col-7">
                     <img src="images/img_02.jpg" alt="">
                 </div>
             </div>
@@ -85,13 +85,13 @@
     </div>
     <div class="gallery contenido-padding">
         <div class="content-size">
-            <div class="gallery__title centrar-texto ">
+            <div class="gallery__title text-center ">
                 <h2 class="mayus">Some Of My Shots</h2>
                 <p class="text-medium">Photography is my passion and I love to turn ideas into beautiful things.</p>
             </div>
             <div class="album__container" ng-hide="!albums.length">
                 <div class="album" ng-repeat="album in albums">
-                    <div class="album__content">
+                    <div>
                         <div class="album__image">
                             <a href="{{album.url}}" class="album__image-hover" data-lightbox="image-1"
                                 data-title="{{album.title.slice(0,20)}}">
@@ -121,68 +121,70 @@
         </div>
     </div>
     <div class="journal contenido-padding">
-        <h2 class="centrar-texto mrg-bottom">FROM MY JOURNAL</h2>
+        <h2 class="text-center mrg-bottom">FROM MY JOURNAL</h2>
         <div class="journal__container content-size">
-            <div class="journal__publication">
-                <div class="album__image">
-                    <div class="album__image-hover">
-                        <h4>READ MORE</h4>
+            <div class="row ">
+                <div class="journal__publication col-4">
+                    <div class="album__image">
+                        <div class="album__image-hover">
+                            <h4>READ MORE</h4>
+                        </div>
+                        <img src="images/img_04.jpg" alt="">
                     </div>
-                    <img src="images/img_04.jpg" alt="">
-                </div>
-                <div class="journal__content">
-                    <div>
-                        <span class="journal__type">Clasificación</span>
-                        <h2 class="journal__title"><a class="link" href="#">Titulo</a></h2>
-                        <p class="text-normal journal__text">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        </p>
-                    </div>
-                    <div class="journal__data text-normal">
-                        <div>Fecha</div>
-                        <div><i class="fas fa-comments"></i></div>
-                    </div>
-                </div>
-            </div>
-            <div class="journal__publication">
-                <div class="album__image">
-                    <div class="album__image-hover">
-                        <h4>READ MORE</h4>
-                    </div>
-                    <img src="images/img_04.jpg" alt="">
-                </div>
-                <div class="journal__content">
-                    <div>
-                        <span class="journal__type">Clasificación</span>
-                        <h2 class="journal__title"><a class="link" href="#">Titulo</a></h2>
-                        <p class="text-normal journal__text">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        </p>
-                    </div>
-                    <div class="journal__data text-normal">
-                        <div>Fecha</div>
-                        <div><i class="fas fa-comments"></i></div>
+                    <div class="journal__content">
+                        <div>
+                            <span class="journal__type">Clasificación</span>
+                            <h2 class="journal__title"><a class="link" href="#">Titulo</a></h2>
+                            <p class="text-normal journal__text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <div class="journal__data text-normal">
+                            <div>Fecha</div>
+                            <div><i class="fas fa-comments"></i></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="journal__publication">
-                <div class="album__image">
-                    <div class="album__image-hover">
-                        <h4>READ MORE</h4>
+                <div class="journal__publication col-4">
+                    <div class="album__image">
+                        <div class="album__image-hover">
+                            <h4>READ MORE</h4>
+                        </div>
+                        <img src="images/img_04.jpg" alt="">
                     </div>
-                    <img src="images/img_04.jpg" alt="">
+                    <div class="journal__content">
+                        <div>
+                            <span class="journal__type">Clasificación</span>
+                            <h2 class="journal__title"><a class="link" href="#">Titulo</a></h2>
+                            <p class="text-normal journal__text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <div class="journal__data text-normal">
+                            <div>Fecha</div>
+                            <div><i class="fas fa-comments"></i></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="journal__content">
-                    <div>
-                        <span class="journal__type">Clasificación</span>
-                        <h2 class="journal__title"><a class="link" href="#">Titulo</a></h2>
-                        <p class="text-normal journal__text">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        </p>
+                <div class="journal__publication col-4">
+                    <div class="album__image">
+                        <div class="album__image-hover">
+                            <h4>READ MORE</h4>
+                        </div>
+                        <img src="images/img_04.jpg" alt="">
                     </div>
-                    <div class="journal__data text-normal">
-                        <div>Fecha</div>
-                        <div><i class="fas fa-comments"></i></div>
+                    <div class="journal__content">
+                        <div>
+                            <span class="journal__type">Clasificación</span>
+                            <h2 class="journal__title"><a class="link" href="#">Titulo</a></h2>
+                            <p class="text-normal journal__text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <div class="journal__data text-normal">
+                            <div>Fecha</div>
+                            <div><i class="fas fa-comments"></i></div>
+                        </div>
                     </div>
                 </div>
             </div>
