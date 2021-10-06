@@ -104,10 +104,6 @@ img {
   max-width: 1400px;
 }
 
-.centrar-texto {
-  text-align: center;
-}
-
 .left-text {
   text-align: left !important;
 }
@@ -258,6 +254,9 @@ img {
   margin-bottom: 5rem !important;
 }
 
+.mrg-medium {
+  margin-bottom: 2rem !important;
+}
 /* Estilos para el navbar*/
 .header {
   background-color: var(--primario);
@@ -361,33 +360,8 @@ img {
   background-color: var(--gris-secundario);
 }
 
-.specialities__content {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  gap: 4rem;
-}
-
-.specialities__article {
-  grid-column: 1/5;
-}
-
-.specialities__img {
-  grid-column: 5/11;
-}
-
 .aboutme {
   background-color: var(--azul);
-}
-
-.aboutme__content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  padding-top: 4rem;
-}
-
-.aboutme__img {
-  grid-row: 1/2;
 }
 
 .something {
@@ -421,12 +395,6 @@ img {
 
 .journal {
   background-color: var(--gris-secundario);
-}
-
-.journal__container {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(3, 1fr);
 }
 
 .journal__publication {
@@ -474,14 +442,6 @@ img {
 .contactForm {
   width: 750px;
   margin: auto;
-}
-
-.contactForm__comunication {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  font-family: sans-serif;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
 }
 
 .comunication__icon {
@@ -565,6 +525,7 @@ img {
   color: var(--gris-primario);
   text-transform: uppercase;
   padding: 1rem 2rem;
+  font-size: 1.5rem;
 }
 
 .album__title-style {
